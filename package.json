@@ -9,14 +9,16 @@
   },
   "packageManager": "pnpm@11.11.0",
   "scripts": {
-    "dev": "tsx src/plugin.ts",
-    "build": "esbuild src/plugin.ts --bundle --platform=node --format=esm --target=node24 --minify --outfile=dist/plugin.mjs",
+    "dev": "node init && tsx src/plugin.ts",
+    "build": "node init && esbuild src/plugin.ts --bundle --platform=node --format=esm --target=node24 --minify --outfile=dist/plugin.mjs",
     "conformance": "node scripts/conformance.mjs",
     "test": "node scripts/test.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@modelcontextprotocol/server": "2.0.0",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2",
     "zod": "4.4.3"
   },
   "devDependencies": {
