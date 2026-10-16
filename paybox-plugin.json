@@ -1,0 +1,6 @@
+{
+  "tool": "get_token_data",
+  "arguments": {
+    "token": "bitcoin"
+  }
+}
